@@ -315,7 +315,7 @@ static void ReplaceData(string filename, int position, byte[] data)
 static UAsset Open(string infile)
 {
     UAsset asset = new UAsset();
-    asset.SetEngineVersion(UAssetAPI.UnrealTypes.EngineVersion.VER_UE4_17);
+    asset.SetEngineVersion(UAssetAPI.UnrealTypes.EngineVersion.VER_UE4_25);
     asset.FilePath = infile;
     asset.Read(asset.PathToReader(asset.FilePath));
     return asset;
