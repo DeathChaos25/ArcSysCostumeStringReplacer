@@ -24,8 +24,8 @@ The easiest way to use this tool is by dragging your folder or `.pak` file onto 
 | Batch File | Description |
 |---|---|
 | `Costume0X to Costume0Y.bat` | Prompts for a source and target costume ID, then replaces all `/CostumeXX` path strings. Skeleton path strings are left unchanged. |
-| `Costume0X to Costume0Y (Also replace Skeleton strings).bat` | Same as above, but also replaces skeleton path strings (e.g. paths containing `Skeleton` or `skeleton`). |
-| `ColorXX to ColorYY.bat` | Prompts for a source and target color ID, then replaces all `/ColorXX` path strings instead of costume strings.  (This is needed for models with "external" props such as Bedman? and Vikala). |
+| `Costume0X to Costume0Y (Also replace Skeleton strings).bat` | Same as above, but also replaces skeleton path strings (e.g. paths containing `Skeleton` or `skeleton`).  (This is needed for most characters with "external" props such as Bedman? and Vikala). |
+| `ColorXX to ColorYY.bat` | Prompts for a source and target color ID, then replaces all `/ColorXX` path strings instead of costume strings. |
 
 Each batch file will prompt you to enter the ID you want to replace **from** and the ID you want to replace **to**.
 
@@ -42,12 +42,6 @@ ArcSysCostumeStringReplacer <folder-or-pak> [targetCostumeID] [replaceSkeletonSt
 | `replaceSkeletonStrings` | `false` | Also replace skeleton path strings |
 | `costumeIDToReplace` | `1` | Costume/color ID to replace **from** |
 | `isReplaceColorMode` | `false` | Replace `/ColorXX` strings instead of `/CostumeXX` |
-
-### Building from Source
-
-```bash
-dotnet build
-```
 
 > **Note:** The UE4 engine version is hardcoded to `VER_UE4_25` in by default, this is the engine version for both Guilty Gear Strive and DNF Duel. Change this in the `Open()` function before compiling if your target game uses a different engine version (such as changing it to 4.17 for DBFZ).
 

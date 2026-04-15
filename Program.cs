@@ -139,7 +139,7 @@ else
             // Repack into PAK with compression
             string outputPakPath = Path.Combine(
                 Path.GetDirectoryName(pakFilePath)!,
-                Path.GetFileNameWithoutExtension(pakFilePath) + $"_Costume{targetCostumeID:D2}.pak");
+                Path.GetFileNameWithoutExtension(pakFilePath) + $"_Costume{targetCostumeID:D2}_P.pak");
 
             Console.WriteLine($"\nRepacking to: {outputPakPath}");
 
